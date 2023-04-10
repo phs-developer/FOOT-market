@@ -1,0 +1,165 @@
+*{
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  font-size : 1em
+}
+
+/* HEADER */
+
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  height: 130px;
+  padding: 15px 30px;
+  margin: 0px auto;
+}
+.logo {
+  width: 25%;
+}
+.logo > img {
+  width: 150px;
+}
+.search-bar {
+  width: 50%;
+  text-align: center;
+}
+.search-bar > input {
+  border: 0px;
+  border-bottom: 1.5px solid black;
+  width: 70%;
+  height: 2rem;
+  background-color: white;
+}
+.search-bar > button {
+  background-color: white;
+  border: none;
+  font-size: 1.2rem;
+}
+.user-info {
+  display: flex;
+  width: 25%;
+  justify-content: end;
+  font-size: 1.5rem;
+}
+.user-info > svg {
+  margin-left: 20px;
+}
+
+/* HEADER-NAV */
+.nav,
+.footer-top {
+  background-color: black;
+  padding: 10px 0;
+}
+.nav-container,
+.cs-container{
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+}
+.nav-item {
+  margin-right: 4%;
+  list-style: none;
+}
+.nav-item > a,
+.nav-item > a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+/* MAIN */
+#main {
+  height: 800px;
+  background-color: lightcoral;
+}
+
+/* FOOTER */
+#footer {
+  height: 350px;
+}
+.cs-item {
+  color: white;
+  margin-right: 2%;
+  font-size: 0.9rem;
+}
+.cs-item:first-child {
+  font-weight: 700;
+}
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 30px auto;
+}
+.footer-bottom > .logo {
+  width: 30%;
+}
+.footer-bottom > .logo > img {
+  color:rgb(150, 148, 148);
+  
+}
+.company-info{
+  width: 35%;
+  font-style: normal;
+}
+.company-info > h3,
+.help-link > h3,
+.social-link > h3 {
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.company-info > p {
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin: 1rem 10px 1rem 0px;
+  color: rgb(150, 148, 148);
+}
+.company-info > p > span:nth-child(2)::before {
+  content: " | ";
+  margin: 0px 5px;
+}
+.cs-link {
+  display: flex;
+  width: 35%;
+  justify-content: space-between;
+}
+.help-link {
+  margin-left: 30%;
+}
+.help-link > ul > li {
+  list-style: none;
+}
+.help-link > ul > li > a,
+.help-link > ul > li > a:visited {
+  color: #666;
+  text-decoration: none;
+  line-height: 28px;
+  font-size: 0.9rem;
+}
+.social-icon {
+  font-size: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+.social-icon > svg {
+  margin: 7px;
+}
+.copyright {
+  padding: 20px 0px;
+  border-top: 1px solid rgb(187, 186, 186);
+}
+.copyright > p {
+  width: 80%;
+  margin: 0px auto;
+  color: #666;
+  font-size: 0.9rem;
+  
+
+}
+
+
+
+
