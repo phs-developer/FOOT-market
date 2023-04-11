@@ -5,7 +5,7 @@ import { Event } from "./Event.js";
 
 export const Section = ({ name, data }) => {
   return (
-    <div>
+    <div id={name} className="section">
       <Event name={name} />
       <div className="content">
         <MainProd props={data} />
