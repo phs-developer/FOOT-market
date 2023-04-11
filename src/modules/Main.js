@@ -1,28 +1,19 @@
-import React, { useEffect, useState } from "react";
-import { MainProd } from "./MainProd.js";
-import { Collection } from "./Collection.js";
-import { Event } from "./Event.js";
+import React from "react";
+import { Section } from "./Section.js";
 
-export const Main = () => {
-  const [data, setData] = useState("");
-
-  useEffect(() => {
-    async function getFetch() {
-      const res = await fetch("product.json");
-      const result = await res.json();
-      setData(result);
-    }
-    getFetch();
-  }, []);
-
+export const Main = ({ data }) => {
   return (
     <div id="main">
-      <Event />
+      <Section name="running" data={data.running} />
+      <Section name="slipper" data={data.slipper} />
+      <Section name="shoes" data={data.shoes} />
+      <Section name="other" data={data.other} />
+      {/* <Event name="shoes" />
       <div className="content">
         <MainProd props={data.shoes} />
         <Collection props={data.shoes} />
         <div className="collection"></div>
-      </div>
+      </div> */}
     </div>
   );
 };
