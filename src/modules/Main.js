@@ -1,24 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { MainProd } from "./MainProd.js";
+import { Collection } from "./Collection.js";
+import { Event } from "./Event.js";
 
 export const Main = () => {
-  async function Data() {
-    const response = await fetch("../product.json");
-    console.log(response);
-    const data = await response.json();
-    console.log(data);
-  }
-  Data();
+  const [data, setData] = useState("");
+
+  useEffect(() => {
+    async function getFetch() {
+      const res = await fetch("product.json");
+      const result = await res.json();
+      setData(result);
+    }
+    getFetch();
+  }, []);
 
   return (
     <div id="main">
+      <Event />
       <div className="content">
-        <div className="main-prod">
-          메인슈즈 3개 슬라이드, 컬레션보다 느리게
-        </div>
-        <div className="collection">
-          슈즈 컬렉션 10개, 5개 보이고 반복 슬라이드로
-        </div>
-        <div className="event">이벤트 배너</div>
+        <MainProd props={data.shoes} />
+        <Collection props={data.shoes} />
+        <div className="collection"></div>
       </div>
     </div>
   );
