@@ -1,16 +1,13 @@
 import React from "react";
-import { MainProd } from "./MainProd.js";
-import { Collection } from "./Collection.js";
 import { Event } from "./Event.js";
+import { ContentItem } from "./ContentItem.js";
 
 export const Section = ({ name, data }) => {
   return (
     <div id={name} className="section">
       <Event name={name} />
       <div className="content">
-        <MainProd props={data} />
-        <Collection props={data} />
-        <div className="collection"></div>
+        <ContentItem data={data} name={name} />
       </div>
     </div>
   );
