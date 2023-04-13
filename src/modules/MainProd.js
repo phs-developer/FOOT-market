@@ -1,15 +1,18 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
+import {
+  faChevronRight,
+  faChevronLeft,
+} from "@fortawesome/free-solid-svg-icons";
 
-export const MainProd = ({ props }) => {
+export const MainProd = ({ props, name }) => {
   // 메인슈즈 3개 슬라이드, 컬레션보다 느리게
   if (!Array.isArray(props)) return;
 
   return (
     <div className="main-prod">
       <button className="prev btn">
-        <FontAwesomeIcon icon={faAngleLeft} />
+        <FontAwesomeIcon icon={faChevronLeft} />
       </button>
       <div className="prod-wrap">
         <div className="prod-box">
@@ -23,7 +26,7 @@ export const MainProd = ({ props }) => {
         </div>
       </div>
       <button className="next btn">
-        <FontAwesomeIcon icon={faAngleRight} />
+        <FontAwesomeIcon icon={faChevronRight} />
       </button>
     </div>
   );
