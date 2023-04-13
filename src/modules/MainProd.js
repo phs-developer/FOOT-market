@@ -5,7 +5,7 @@ import {
   faChevronLeft,
 } from "@fortawesome/free-solid-svg-icons";
 
-export const MainProd = ({ props, name }) => {
+export const MainProd = ({ props }) => {
   // 메인슈즈 3개 슬라이드, 컬레션보다 느리게
   if (!Array.isArray(props)) return;
 
