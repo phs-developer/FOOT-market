@@ -33,7 +33,7 @@ export const Header = () => {
             <a href="#!">MAN</a>
           </li>
           <li className="nav-item">
-            <a href="#!">WOMAN</a>
+            <a href="#!">WOMEN</a>
           </li>
           <li className="nav-item">
             <a href="#!">KIDS</a>

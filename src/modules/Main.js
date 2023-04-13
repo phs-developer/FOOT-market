@@ -39,10 +39,36 @@ export const Main = ({ data }) => {
   return (
     <div id="main">
       <MoveBtn />
-      <Section name="running" data={data.running} />
-      <Section name="slipper" data={data.slipper} />
-      <Section name="shoes" data={data.shoes} />
-      <Section name="other" data={data.other} />
+      <Section className="section" name="running" data={data.running} />
+      <div className="brand-focus">
+        <div className="title">
+          <h3>Brand focus</h3>
+          <span>추천 브랜드</span>
+        </div>
+        <div className="brand">
+          <a href="!#">
+            <img src="image/Brand/nike.jpg" alt="나이키" />
+          </a>
+          <a href="!#">
+            <img src="image/Brand/new balance.jpg" alt="나이키" />
+          </a>
+          <a href="!#">
+            <img src="image/Brand/jordan.jpg" alt="나이키" />
+          </a>
+          <a href="!#">
+            <img src="image/Brand/adidas.jpg" alt="나이키" />
+          </a>
+          <a href="!#">
+            <img src="image/Brand/crocs.jpg" alt="나이키" />
+          </a>
+          <a href="!#">
+            <img src="image/Brand/converse.jpg" alt="나이키" />
+          </a>
+        </div>
+      </div>
+      <Section className="section" name="slipper" data={data.slipper} />
+      <Section className="section" name="shoes" data={data.shoes} />
+      <Section className="section" name="other" data={data.other} />
     </div>
   );
 };
