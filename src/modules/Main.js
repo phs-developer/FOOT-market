@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Section } from "./Section.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlane } from "@fortawesome/free-solid-svg-icons";
 
-export const Main = ({ data }) => {
+export const Main = () => {
+  const [data, setData] = useState("");
+  useEffect(() => {
+    async function getFetch() {
+      const response = await fetch("product.json");
+      const result = await response.json();
+      setData(result);
+    }
+    getFetch();
+  }, []);
+
   // MoveBtn --> 앵커, top버튼
   const MoveBtn = () => {
     const scrollToTop = () => {
