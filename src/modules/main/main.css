@@ -1,0 +1,174 @@
+.move-wrap {
+  display: flex;
+  flex-direction: column;
+}
+.move {
+  width: 290px;
+  color: black;
+  padding: 5px 0px 5px 213px;
+  background-color: rgba(0,0,0,.8);
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all .5s;
+  position: fixed;
+  left: -200px;
+}
+.move:nth-child(1) {
+  top: 200px;
+}
+.move:nth-child(2) {
+  top: 250px;
+}
+.move:nth-child(3) {
+  top: 300px;
+}
+.move:nth-child(4) {
+  top: 350px;
+}
+.move:hover {
+  left: -180px
+}
+.move:active {
+  transition: all 1s;
+}
+
+.event-banner {
+  width: 100%;
+}
+.content {
+  width: 80%;
+  margin: 0 auto 6rem;
+}
+.section-title {
+  font-size: 3rem;
+  padding-top: 1rem;
+  width: 80%;
+  border-bottom: 2px solid black;
+  width: 300px;
+}
+.main-prod {
+  display: flex;
+  justify-content: space-around;
+}
+.prod-hidden {
+  overflow: hidden;
+}
+.main-wrap,
+.prod-wrap {
+  display: flex;
+  align-items: center;
+}
+.main-wrap {
+  width: 500px;
+}
+.main-box > .main-item {
+  width: 500px;
+}
+.prod-wrap {
+  justify-content: space-between;
+}
+.prod-item {
+  width: 15%;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.prod-img {
+  width: 100%;
+}
+.prod-item > span {
+  width: 70%;
+  font-size: 0.8rem;
+  color: #919090;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.prod-item > .brand-name {
+  color: black;
+  font-size: 1rem;
+  margin-bottom: 3px;
+}
+/* 슬리퍼, 기타 섹션 flex-row */
+.row-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.row-content > .main-prod {
+  width: 500px;
+}
+.row-content > .collection > .prod-wrap {
+  flex-wrap: wrap;
+}
+.row-content > .collection > .prod-wrap > .prod-item {
+  width: 30%
+}
+.brand-focus {
+  width: 80%;
+  margin: 2rem auto;
+}
+.title {
+  margin-bottom: 20px;
+}
+.title > h3 {
+  font-size: 1.5rem;
+}
+.title > span {
+  color: #bbb9b9;
+}
+.brand {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.brand > a {
+  width: 32%;
+}
+.brand > a > img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 5px;
+  border-radius: 10px;
+}
+
+@media (max-width: 1024px) {
+  .move-wrap {
+    display: none;
+  }
+  .content {
+    width: 95%;
+  }
+  .prod-wrap {
+    flex-wrap: wrap;
+  }
+  .prod-item,
+  .row-content > .collection > .prod-wrap > .prod-item {
+    width: 30%;
+  }
+  .brand > a {
+    width: 49%;
+  }
+  .row-content {
+    flex-direction: column;
+  }
+  .row-content > .main-prod {
+    width: 100%;
+  }
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2.5rem;
+    width: 250px;
+  } 
+  .brand > a {
+    width: 32%;
+  }
+}
