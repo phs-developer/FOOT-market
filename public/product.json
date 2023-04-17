@@ -2,250 +2,289 @@
   "running" : [
     {
       "name" : "아식스 젤 카야노 14 화이트 미드나잇",
-      "price" : "",
+      "price" : "139000",
       "img" : "image/running/아식스 젤 카야노 14 화이트 미드나잇.png",
-      "brand" : "asics"
+      "brand" : "asics",
+      "gender" : "Unisex"
     },
     {
       "name" : "나이키 x 톰 삭스 제너럴 퍼포즈 슈 아카이브",
-      "price" : "",
+      "price" : "219000",
       "img" : "image/running/나이키 x 톰 삭스 제너럴 퍼포즈 슈 아카이브.png",
-      "brand" : "nike"
+      "brand" : "nike",
+      "gender" : "Unisex"
     },
     {
       "name" : "조던 1 로우 SE 도쿄 96",
-      "price" : "",
+      "price" : "309000",
       "img" : "image/running/조던 1 로우 SE 도쿄 96.png",
-      "brand" : "johrdan"
+      "brand" : "johrdan",
+      "gender" : "Unisex"
     },
     {
       "name" : "나이키 에어포스 1 '07 LV8 40주년 조인 포스 세일 말라카이트",
-      "price" : "",
+      "price" : "199000",
       "img" : "image/running/나이키 에어포스 1 '07 LV8 40주년 조인 포스 세일 말라카이트.png",
-      "brand" : "nike"
+      "brand" : "nike",
+      "gender" : "Unisex"
     },
     {
       "name" : "살로몬 XT-6 루나 락 다크 사파이어",
-      "price" : "",
+      "price" : "139000",
       "img" : "image/running/살로몬 XT-6 루나 락 다크 사파이어,.png",
-      "brand" : "salomon"
+      "brand" : "salomon",
+      "gender" : "Unisex"
     },
     {
       "name" : "나이키 에어포스 1 '07 LV8 미드나잇 네이비",
-      "price" : "",
+      "price" : "210000",
       "img" : "image/running/나이키 에어포스 1 '07 LV8 미드나잇 네이비.png",
-      "brand" : "nike"
+      "brand" : "nike",
+      "gender" : "Unisex"
     },
     {
       "name" : "나이키 에어포스 1 '07 WB 플랙스",
-      "price" : "",
+      "price" : "179000",
       "img" : "image/running/나이키 에어포스 1 '07 WB 플랙스.png",
-      "brand" : "nike"
+      "brand" : "nike",
+      "gender" : "Unisex"
     },
     {
       "name" : "살로몬 XT-6 ADV 블랙.",
-      "price" : "",
+      "price" : "319000",
       "img" : "image/running/살로몬 XT-6 ADV 블랙.png",
-      "brand" : "salomon"
+      "brand" : "salomon",
+      "gender" : "Unisex"
     },
     {
       "name" : "나이키 에어포스 1 '07 로우 화이트",
-      "price" : "",
+      "price" : "99000",
       "img" : "image/running/나이키 에어포스 1 '07 로우 화이트.png",
-      "brand" : "nike"
+      "brand" : "nike",
+      "gender" : "Unisex"
     },
     {
       "name" : "뉴발란스 993 메이드 인 USA 그레이 - D 스탠다드",
-      "price" : "",
+      "price" : "139000",
       "img" : "image/running/뉴발란스 993 메이드 인 USA 그레이 - D 스탠다드.png",
-      "brand" : "new balance"
+      "brand" : "new balance",
+      "gender" : "Unisex"
     }
   ],
   "slipper" : [
     {
       "name" : "크록스 에코 클로그 리얼 트리 본",
-      "price" : "",
+      "price" : "69000",
       "img" : "image/slipper/크록스 에코 클로그 리얼 트리 본.png",
-      "brand" : "crocs"
+      "brand" : "crocs",
+      "gender" : "Unisex"
     },
     {
       "name" : "끌로에 우디 플랫 뮬 화이트",
-      "price" : "",
+      "price" : "154000",
       "img" : "image/slipper/끌로에 우디 플랫 뮬 화이트.png",
-      "brand" : "chloe"
+      "brand" : "chloe",
+      "gender" : "woman"
     },
     {
       "name" : "발렌티노 고무 락스터드 통 블랙",
-      "price" : "",
+      "price" : "159000",
       "img" : "image/slipper/발렌티노 고무 락스터드 통 블랙.png",
-      "brand" : "valentino"
+      "brand" : "valentino",
+      "gender" : "woman"
     },
     {
       "name" : "버버리 빈티지 체크 슬라이드 아카이브 베이지",
-      "price" : "",
+      "price" : "119000",
       "img" : "image/slipper/버버리 빈티지 체크 슬라이드 아카이브 베이지.png",
-      "brand" : "burberry"
+      "brand" : "burberry",
+      "gender" : "Unisex"
     },
     {
       "name" : "버켄스탁 보스턴 소프트 풋베드 토프 - 레귤러",
-      "price" : "",
+      "price" : "69000",
       "img" : "image/slipper/버켄스탁 보스턴 소프트 풋베드 토프 - 레귤러.png",
-      "brand" : "birkenstock"
+      "brand" : "birkenstock",
+      "gender" : "Unisex"
     },
     {
       "name" : "보테가 베네타 러버 슬라이더 패러킷",
-      "price" : "",
+      "price" : "109000",
       "img" : "image/slipper/보테가 베네타 러버 슬라이더 패러킷.png",
-      "brand" : "botteha veneta"
+      "brand" : "botteha veneta",
+      "gender" : "Unisex"
     },
     {
       "name" : "아디다스 아딜렛 클로그 블랙 화이트",
-      "price" : "",
+      "price" : "69000",
       "img" : "image/slipper/아디다스 아딜렛 클로그 블랙 화이트.png",
-      "brand" : "adidas"
+      "brand" : "adidas",
+      "gender" : "Unisex"
     },
     {
       "name" : "아디다스 이지 슬라이드 레진 2022",
-      "price" : "",
+      "price" : "89000",
       "img" : "image/slipper/아디다스 이지 슬라이드 레진 2022.png",
-      "brand" : "adidas"
+      "brand" : "adidas",
+      "gender" : "Unisex"
     },
     {
       "name" : "크록스 x 살레헤 벰버리 폴렉스 클로그 사스콰치",
-      "price" : "",
+      "price" : "79000",
       "img" : "image/slipper/크록스 x 살레헤 벰버리 폴렉스 클로그 사스콰치.png",
-      "brand" : "crocs"
+      "brand" : "crocs",
+      "gender" : "Unisex"
     },
     {
       "name" : "크록스 바야밴드 클로그 화이트 네이비",
-      "price" : "",
+      "price" : "69000",
       "img" : "image/slipper/크록스 바야밴드 클로그 화이트 네이비.png",
-      "brand" : "crocs"
+      "brand" : "crocs",
+      "gender" : "Unisex"
     }
   ],
   "shoes" : [
     {
       "name" : "마르니 레더 사보 블랙",
-      "price" : "",
+      "price" : "219000",
       "img" : "image/shoes/마르니 레더 사보 블랙.png",
-      "brand" : "marni"
+      "brand" : "marni",
+      "gender" : "woman"
     },
     {
       "name" : "미우 미우 사틴 발레리나 펌프스 블랙",
-      "price" : "",
+      "price" : "309000",
       "img" : "image/shoes/미우 미우 사틴 발레리나 펌프스 블랙.png",
-      "brand" : "miu miu"
+      "brand" : "miu miu",
+      "gender" : "woman"
     },
     {
       "name" : "미우 미우 페이턴트 레더 펌프스 화이트 블랙",
-      "price" : "",
+      "price" : "259000",
       "img" : "image/shoes/미우 미우 페이턴트 레더 펌프스 화이트 블랙.png",
-      "brand" : "miu miu"
+      "brand" : "miu miu",
+      "gender" : "woman"
     },
     {
       "name" : "버버리 빈티지 체크 레더 포인트 토 펌프스 아카이브 베이지",
-      "price" : "",
+      "price" : "119000",
       "img" : "image/shoes/버버리 빈티지 체크 레더 포인트 토 펌프스 아카이브 베이지.png",
-      "brand" : "burberry"
+      "brand" : "burberry",
+      "gender" : "woman"
     },
     {
       "name" : "생로랑 스무스 레더 모노그램 페니 로퍼 펄",
-      "price" : "",
+      "price" : "189000",
       "img" : "image/shoes/생로랑 스무스 레더 모노그램 페니 로퍼 펄.png",
-      "brand" : "saint laurent"
+      "brand" : "saint laurent",
+      "gender" : "woman"
     },
     {
       "name" : "에르메스 데스틴 로퍼 스웨이드 고트스킨 & 로즈 골드 하드웨어 로즈 오파라인",
-      "price" : "",
+      "price" : "209000",
       "img" : "image/shoes/에르메스 데스틴 로퍼 스웨이드 고트스킨 & 로즈 골드 하드웨어 로즈 오파라인.png",
-      "brand" : "hermes"
+      "brand" : "hermes",
+      "gender" : "woman"
     },
     {
       "name" : "토즈 고미노 스웨이드 드라이빙 슈즈 그레이",
-      "price" : "",
+      "price" : "319000",
       "img" : "image/shoes/토즈 고미노 스웨이드 드라이빙 슈즈 그레이.png",
-      "brand" : "tods"
+      "brand" : "tods",
+      "gender" : "woman"
     },
     {
       "name" : "토즈 시티 고미노 가죽 드라이빙 슈즈 화이트",
-      "price" : "",
+      "price" : "229000",
       "img" : "image/shoes/토즈 시티 고미노 가죽 드라이빙 슈즈 화이트.png",
-      "brand" : "tods"
+      "brand" : "tods",
+      "gender" : "woman"
     },
     {
       "name" : "프라다 브러쉬드 레더 슬링백 펌프스 오렌지",
-      "price" : "",
+      "price" : "139000",
       "img" : "image/shoes/프라다 브러쉬드 레더 슬링백 펌프스 오렌지.png",
-      "brand" : "prada"
+      "brand" : "prada",
+      "gender" : "woman"
     },
     {
       "name" : "프라다 초콜릿 브러쉬드 레더 로퍼 블랙",
-      "price" : "",
+      "price" : "119000",
       "img" : "image/shoes/프라다 초콜릿 브러쉬드 레더 로퍼 블랙.png",
-      "brand" : "prada"
+      "brand" : "prada",
+      "gender" : "woman"
     }
   ],
   "other" : [
     {
       "name" : "닥터마틴 x 릭 오웬스 1460 RO 쿼드",
-      "price" : "",
+      "price" : "219000",
       "img" : "image/other/닥터마틴 x 릭 오웬스 1460 RO 쿼드.png",
-      "brand" : "dr.martens"
+      "brand" : "dr.martens",
+      "gender" : "man"
     },
     {
       "name" : "닥터마틴 X 슈프림 펜톤 테슬 로퍼 카우",
-      "price" : "",
+      "price" : "309000",
       "img" : "image/other/닥터마틴 X 슈프림 펜톤 테슬 로퍼 카우.png",
-      "brand" : "dr.martens"
+      "brand" : "dr.martens",
+      "gender" : "woman"
     },
     {
       "name" : "어그 클래식 클리어 미니 부츠 내츄럴 블랙",
-      "price" : "",
+      "price" : "209000",
       "img" : "image/other/어그 클래식 클리어 미니 부츠 내츄럴 블랙.png",
-      "brand" : "ugg"
+      "brand" : "ugg",
+      "gender" : "woman"
     },
     {
       "name" : "메종 마르지엘라 빈티지 레더 타비 부츠 블랙",
-      "price" : "",
+      "price" : "189000",
       "img" : "image/other/메종 마르지엘라 빈티지 레더 타비 부츠 블랙.png",
-      "brand" : "maison margiela"
+      "brand" : "maison margiela",
+      "gender" : "woman"
     },
     {
       "name" : "몽클레르 몬 코프 레이스 업 부츠 라이트 브라운 - 22FW",
-      "price" : "",
+      "price" : "339000",
       "img" : "image/other/몽클레르 몬 코프 레이스 업 부츠 라이트 브라운 - 22FW.png",
-      "brand" : "moncler"
+      "brand" : "moncler",
+      "gender" : "man"
     },
     {
       "name" : "반스 볼트 x 더블탭스 UA 스탠다드 스노우 MTE 코요테",
-      "price" : "",
+      "price" : "199000",
       "img" : "image/other/반스 볼트 x 더블탭스 UA 스탠다드 스노우 MTE 코요테.png",
-      "brand" : "vans"
+      "brand" : "vans",
+      "gender" : "man"
     },
     {
       "name" : "아워레가시 카미온 부츠 꼬냑 브라운 레더",
-      "price" : "",
+      "price" : "259000",
       "img" : "image/other/아워레가시 카미온 부츠 꼬냑 브라운 레더.png",
-      "brand" : "our legacy"
+      "brand" : "our legacy",
+      "gender" : "woman"
     },
     {
       "name" : "어그 클래식 미니 2 부츠 그레이",
-      "price" : "",
+      "price" : "139000",
       "img" : "image/other/어그 클래식 미니 2 부츠 그레이.png",
-      "brand" : "ugg"
+      "brand" : "ugg",
+      "gender" : "woman"
     },
     {
       "name" : "어그 클래식 미니 2 부츠 체스트넛",
-      "price" : "",
+      "price" : "119000",
       "img" : "image/other/어그 클래식 미니 2 부츠 체스트넛.png",
-      "brand" : "ugg"
+      "brand" : "ugg",
+      "gender" : "woman"
     },
     {
       "name" : "헌터 오리지널 톨 레인 부츠 블랙",
-      "price" : "",
+      "price" : "169000",
       "img" : "image/other/헌터 오리지널 톨 레인 부츠 블랙.png",
-      "brand" : "hunter"
+      "brand" : "hunter",
+      "gender" : "woman"
     }
-  ],
-  "type": "module"
+  ]
 }
