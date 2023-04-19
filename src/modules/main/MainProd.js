@@ -3,11 +3,11 @@ import React, { useState, useEffect, useRef } from "react";
 export const MainProd = ({ props }) => {
   const animationHandler = useRef();
   const [index, setIndex] = useState(0);
-  const [prodWidth, setProdWidth] = useState(500);
+  const [prodWidth, setProdWidth] = useState(0);
 
   // 슬라이드 구현
   useEffect(() => {
-    setProdWidth(document.getElementsByClassName("main-wrap")[0].clientWidth);
+    setProdWidth(document.querySelector(".main-wrap")?.clientWidth);
     setTimeout(() => {
       if (animationHandler.current) {
         //useRef() 오류처리

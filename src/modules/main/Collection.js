@@ -10,7 +10,7 @@ export const Collection = ({ props, name }) => {
     let item = [];
     for (let i = 0; i < length; i++) {
       item.push(
-        <li className="prod-item">
+        <li key={props[i].name} className="prod-item">
           <img className="prod-img" src={props[i].img} alt={props[i].img} />
           <span className="brand-name">{props[i].brand}</span>
           <span>{props[i].name}</span>
