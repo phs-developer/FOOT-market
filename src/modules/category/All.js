@@ -2,7 +2,7 @@ import React from "react";
 import { ProdItem } from "./ProdItem.js";
 import "./category.css";
 
-export const Brand = ({ data }) => {
+export const All = ({ data }) => {
   const prodKeys = Object.keys(data);
   const prodList = [];
   prodKeys.forEach((e) => {
@@ -14,7 +14,7 @@ export const Brand = ({ data }) => {
 
   return (
     <div className="category">
-      <h2>BRAND</h2>
+      <h2>ALL</h2>
       <div className="sort-wrap">
         <span>상품 {prodList.length}</span>
         <button type="button">이름순</button>
