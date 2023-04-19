@@ -76,6 +76,9 @@ button {
   background-color: black;
   padding: 10px 0;
 }
+.nav > svg {
+  display: none
+}
 .nav-container,
 .cs-container{
   width: 80%;
@@ -180,6 +183,8 @@ button {
   margin-top: 10px;
 }
 
+
+/* 태블릿 */
 @media (max-width:1024px) {
   #header {
     height: 100px;
@@ -209,7 +214,8 @@ button {
   .user-info > svg {
     margin-left: 15px;
   }
-  .bar {
+  .bar,
+  .nav > svg {
     display: block;
   }
 
@@ -222,14 +228,17 @@ button {
     border-bottom: 1px solid black;
   }
   .nav {
-    display: none;
+    /* display: none; */
     position: fixed;
     top: 0px;
-    right: 0px;
+    right: -100%;
     width: 100%;
     height: 50%;
     transition: all 1s;
     z-index: 9999;
+  }
+  .nav-active {
+    right: 0px;
   }
   .nav-container {
     height: 100%;
@@ -243,6 +252,14 @@ button {
   .nav-item > a,
   .nav-item > a:visited {
     font-size: 1.5rem;
+  }
+  .nav > svg {
+    color: white;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 2rem;
+    padding: 10px;
   }
 
 
@@ -301,6 +318,35 @@ button {
   .search-bar > button > svg,
   .user-info > svg {
     font-size: 1.3rem;
+  }
+  
+}
+@media (max-width: 576px) {
+  .content > .section-title {
+    font-size : 2rem;
+  }
+  .prod-hidden > .main-wrap {
+    width: 300px;
+  }
+  .main-wrap> .main-box > .main-item {
+    width: 300px;
+  }
+  .brand-focus> .brand > a {
+    width: 49%;
+  }
+  .cs-container,
+  .footer-bottom {
+    flex-wrap: wrap;
+  }
+  .company-info{
+    width: 500px;
+  }
+  .help-link {
+    width: 100%;
+  }
+  .footer-bottom > .logo {
+    right: 150px;
+    bottom: 70px;
   }
 }
 

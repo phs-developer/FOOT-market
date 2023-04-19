@@ -1,6 +1,6 @@
 import "./App.css";
 import { Main } from "./modules/main/Main.js";
-import { Brand } from "./modules/category/Brand.js";
+import { All } from "./modules/category/All.js";
 import { Unisex } from "./modules/category/Unisex.js";
 import { Kids } from "./modules/category/Kids.js";
 import React, { useState, useEffect } from "react";
@@ -14,6 +14,7 @@ import {
   faB,
   faPlane,
   faBars,
+  faXmark,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faFacebookSquare,
@@ -34,6 +35,17 @@ function App() {
 
   //Header
   const Header = () => {
+    const [active, setActive] = useState("nav");
+    function barViewer() {
+      if (active === "nav") {
+        setActive("nav nav-active");
+        console.log(active);
+      } else {
+        setActive("nav");
+        console.log(active);
+      }
+    }
+
     return (
       <header>
         <div id="header">
@@ -55,13 +67,22 @@ function App() {
               role="cart"
             />
             <FontAwesomeIcon className="user" icon={faUser} role="user" />
-            <FontAwesomeIcon className="bar" icon={faBars} />
+            <FontAwesomeIcon
+              className="bar"
+              icon={faBars}
+              onClick={barViewer}
+            />
           </div>
         </div>
-        <div className="nav">
+        <div className={active}>
+          <FontAwesomeIcon
+            icon={faXmark}
+            role="bar delete"
+            onClick={barViewer}
+          />
           <ul className="nav-container">
             <li className="nav-item">
-              <Link to="/BRAND">BRAND</Link>
+              <Link to="/ALL">ALL</Link>
             </li>
             <li className="nav-item">
               <Link to="/MAN">MAN</Link>
@@ -173,7 +194,7 @@ function App() {
       <Header />
       <Routes>
         <Route exact path="/" element={<Main data={data} />} />
-        <Route path="/BRAND" element={<Brand data={data} />} />
+        <Route path="/ALL" element={<All data={data} />} />
         <Route path="/MAN" element={<Unisex data={data} title="man" />} />
         <Route path="/WOMAN" element={<Unisex data={data} title="woman" />} />
         <Route path="/KIDS" element={<Kids />} />
