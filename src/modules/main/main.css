@@ -164,8 +164,18 @@
 
 /* mobile */
 @media (max-width: 768px) {
+  .event {
+    overflow: hidden;
+  }
+  .event-banner {
+    width: 150%;
+    height: 180px;
+    margin-right: 50%;
+    transform: translateX(-15%);
+    
+  }
   .section-title {
-    font-size: 2.5rem;
+    font-size: 2rem;
     width: 250px;
   } 
   .brand > a {
