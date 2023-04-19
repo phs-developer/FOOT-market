@@ -8,7 +8,7 @@ export const ProdItem = ({ data }) => {
 
   return data.map((e) => {
     return (
-      <li className="prod-item category-item">
+      <li key={e.name} className="prod-item category-item">
         <img className="prod-img" src={e.img} alt={e.img} />
         <span className="brand-name">{e.brand}</span>
         <span>{e.name}</span>

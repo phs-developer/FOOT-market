@@ -304,6 +304,9 @@ button {
     font-size: 1.2rem;
     margin-left: 0px;
   }
+  .top-moved {
+    font-size: 2rem;
+  }
 }
 
 

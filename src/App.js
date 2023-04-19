@@ -39,10 +39,8 @@ function App() {
     function barViewer() {
       if (active === "nav") {
         setActive("nav nav-active");
-        console.log(active);
       } else {
         setActive("nav");
-        console.log(active);
       }
     }
 
@@ -82,16 +80,24 @@ function App() {
           />
           <ul className="nav-container">
             <li className="nav-item">
-              <Link to="/ALL">ALL</Link>
+              <Link to="/ALL" onClick={barViewer}>
+                ALL
+              </Link>
             </li>
             <li className="nav-item">
-              <Link to="/MAN">MAN</Link>
+              <Link to="/MAN" onClick={barViewer}>
+                MAN
+              </Link>
             </li>
             <li className="nav-item">
-              <Link to="/WOMAN">WOMAN</Link>
+              <Link to="/WOMAN" onClick={barViewer}>
+                WOMAN
+              </Link>
             </li>
             <li className="nav-item">
-              <Link to="/KIDS">KIDS</Link>
+              <Link to="/KIDS" onClick={barViewer}>
+                KIDS
+              </Link>
             </li>
           </ul>
         </div>
