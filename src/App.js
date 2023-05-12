@@ -3,8 +3,9 @@ import { Main } from "./modules/main/Main.js";
 import { All } from "./modules/category/All.js";
 import { Unisex } from "./modules/category/Unisex.js";
 import { Kids } from "./modules/category/Kids.js";
+import { Search } from "./modules/category/Search.js";
 import React, { useState, useEffect } from "react";
-import { Link, Route, Routes } from "react-router-dom";
+import { Link, Route, Routes, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCartShopping,
@@ -22,6 +23,8 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 function App() {
+  const navigate = useNavigate();
+
   //json 데이터 받기
   const [data, setData] = useState("");
   useEffect(() => {
@@ -44,6 +47,11 @@ function App() {
       }
     }
 
+    const searchPage = (e) => {
+      navigate("/search");
+      e.preventDefault();
+    };
+
     return (
       <header>
         <div id="header">
@@ -52,11 +60,20 @@ function App() {
               <img src="logo.png" alt="로고이미지" />
             </Link>
           </h1>
-          <form className="search-bar">
-            <input type="text" placeholder="키워드를 입력하세요!" />
-            <button type="submit">
-              <FontAwesomeIcon icon={faMagnifyingGlass} />
-            </button>
+          <form className="search-bar" name="search" method="get" role="search">
+            <fieldset>
+              <legend>검색</legend>
+              <input
+                id="query"
+                type="search"
+                title="검색어 입력"
+                maxLength="100"
+                placeholder="키워드를 입력하세요!"
+              />
+              <button type="submit" title="검색" onClick={searchPage}>
+                <FontAwesomeIcon icon={faMagnifyingGlass} />
+              </button>
+            </fieldset>
           </form>
           <div className="user-info">
             <FontAwesomeIcon
@@ -204,6 +221,7 @@ function App() {
         <Route path="/MAN" element={<Unisex data={data} title="man" />} />
         <Route path="/WOMAN" element={<Unisex data={data} title="woman" />} />
         <Route path="/KIDS" element={<Kids />} />
+        <Route path="/search" element={<Search data={data} />} />
       </Routes>
       <Footer />
       <ScrollToTop />

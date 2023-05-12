@@ -43,7 +43,13 @@ button {
   width: 60%;
   text-align: center;
 }
-.search-bar > input {
+.search-bar > fieldset {
+  border: 0px;
+}
+.search-bar > fieldset > legend {
+  display: none;
+}
+.search-bar > fieldset > input {
   border: 0px;
   border-bottom: 1.5px solid black;
   width: 50%;
@@ -52,10 +58,11 @@ button {
   outline: none;
   padding-left: 5px;
 }
-.search-bar > button {
+.search-bar > fieldset > button {
   background-color: white;
   border: none;
   font-size: 1.2rem;
+  cursor: pointer;
 }
 .user-info {
   display: flex;
