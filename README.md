@@ -47,7 +47,9 @@
       - main.css
 
 
-#### 6. 메인 화면
+#### 6. 구현 화면
+![foo_2](https://github.com/phs-developer/FOOT-market/assets/82524095/fcdaca53-83bf-483c-851f-40e27cf17342)
+
 
 ![foot_2](https://github.com/phs-developer/FOOT-market/assets/82524095/c3f0e96f-0c5b-44b7-aac6-7c496e7962d8)
 
