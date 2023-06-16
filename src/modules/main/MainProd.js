@@ -1,37 +1,39 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 
-export const MainProd = ({ props }) => {
-  const animationHandler = useRef();
-  const [index, setIndex] = useState(0);
-  const [prodWidth, setProdWidth] = useState(0);
+export const MainProd = ({ data }) => {
+  const animationHandler = useRef(null);
 
   // 슬라이드 구현
   useEffect(() => {
-    setProdWidth(document.querySelector(".main-wrap")?.clientWidth);
-    setTimeout(() => {
+    const size = window.matchMedia("screen and (max-width:576px)").matches
+      ? 300
+      : 500;
+    let count = 1;
+    setInterval(() => {
+      // ref 유효성검사
       if (animationHandler.current) {
-        //useRef() 오류처리
-        if (index < 3) {
-          setIndex(index + 1);
-          animationHandler.current.style.transition = "all 1s";
+        if (count < 4) {
+          animationHandler.current.style.transform = `translateX(-${
+            count * size
+          }px)`;
+          count++;
         } else {
-          setIndex(0);
-          animationHandler.current.style.transition = "";
+          animationHandler.current.style.transform = "translateX(0px)";
+          count = 1;
         }
       }
     }, 2000);
-  }, [index]);
+  }, []);
 
-  if (!Array.isArray(props)) return;
+  if (!Array.isArray(data)) return;
 
   // mian-prod 생성
   function MakeMainProdItem() {
     let li = [];
-    const index = [0, 4, 6, 0];
-    index.forEach((e, i) => {
+    [0, 2, 4, 6].forEach((e) => {
       li.push(
-        <div key={i} className="main-box">
-          <img className="main-item" src={props[e].img} alt={props[e].img} />
+        <div key={e} className="main-box">
+          <img className="main-item" src={data[e].img} alt={data[e].img} />
         </div>
       );
     });
@@ -44,7 +46,7 @@ export const MainProd = ({ props }) => {
         <div
           className="main-wrap"
           ref={animationHandler}
-          style={{ transform: `translateX(-${index * prodWidth}px)` }}
+          style={{ transform: `translateX(0px)` }}
         >
           <MakeMainProdItem />
         </div>
