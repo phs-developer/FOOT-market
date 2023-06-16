@@ -1,12 +1,13 @@
-import React from "react";
-import { ProdItem } from "./ProdItem.js";
+import { ProdItem } from "./category/ProdItem.js";
 
-export const Unisex = ({ data, title }) => {
+export const Search = ({ data }) => {
+  const value = document.getElementById("query").value;
+
   const prodKeys = Object.keys(data);
   const prodList = [];
   prodKeys.forEach((e) => {
     for (let i = 0; i < data[e].length; i++) {
-      if (data[e][i].gender === "Unisex" || data[e][i].gender === title) {
+      if (data[e][i].name.includes(value)) {
         prodList.push(data[e][i]);
       }
     }
@@ -14,7 +15,7 @@ export const Unisex = ({ data, title }) => {
 
   return (
     <div className="category">
-      <h2>{title.toUpperCase()}</h2>
+      <h2>'{value}' 검색 결과</h2>
       <div className="sort-wrap">
         <span>상품 {prodList.length}</span>
         <button type="button">이름순</button>
