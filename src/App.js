@@ -1,9 +1,7 @@
 import "./App.css";
 import { Main } from "./modules/main/Main.js";
-import { All } from "./modules/category/All.js";
-import { Unisex } from "./modules/category/Unisex.js";
-import { Kids } from "./modules/category/Kids.js";
-import { Search } from "./modules/category/Search.js";
+import { CategoryPage } from "./modules/category/category.js";
+import { Search } from "./modules/Search.js";
 import React, { useState, useEffect } from "react";
 import { Link, Route, Routes, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -23,9 +21,6 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 function App() {
-  const navigate = useNavigate();
-
-  //json 데이터 받기
   const [data, setData] = useState("");
   useEffect(() => {
     async function getFetch() {
@@ -36,15 +31,13 @@ function App() {
     getFetch();
   }, []);
 
+  const navigate = useNavigate();
+
   //Header
   const Header = () => {
     const [active, setActive] = useState("nav");
-    function barViewer() {
-      if (active === "nav") {
-        setActive("nav nav-active");
-      } else {
-        setActive("nav");
-      }
+    function handleNavOpen() {
+      active === "nav" ? setActive("nav nav-active") : setActive("nav");
     }
 
     const searchPage = (e) => {
@@ -67,8 +60,8 @@ function App() {
                 id="query"
                 type="search"
                 title="검색어 입력"
-                maxLength="100"
-                placeholder="키워드를 입력하세요!"
+                maxLength="50"
+                placeholder="키워드를 입력하세요."
               />
               <button type="submit" title="검색" onClick={searchPage}>
                 <FontAwesomeIcon icon={faMagnifyingGlass} />
@@ -85,7 +78,7 @@ function App() {
             <FontAwesomeIcon
               className="bar"
               icon={faBars}
-              onClick={barViewer}
+              onClick={handleNavOpen}
             />
           </div>
         </div>
@@ -93,29 +86,18 @@ function App() {
           <FontAwesomeIcon
             icon={faXmark}
             role="bar delete"
-            onClick={barViewer}
+            onClick={handleNavOpen}
           />
           <ul className="nav-container">
-            <li className="nav-item">
-              <Link to="/ALL" onClick={barViewer}>
-                ALL
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link to="/MAN" onClick={barViewer}>
-                MAN
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link to="/WOMAN" onClick={barViewer}>
-                WOMAN
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link to="/KIDS" onClick={barViewer}>
-                KIDS
-              </Link>
-            </li>
+            {["ALL", "MAN", "WOMAN", "KIDS"].map((e) => {
+              return (
+                <li className="nav-item" key={e}>
+                  <Link to={`/${e}`} onClick={handleNavOpen}>
+                    {e}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         </div>
       </header>
@@ -160,18 +142,13 @@ function App() {
               <div className="help-link">
                 <h3>HELP</h3>
                 <ul>
-                  <li>
-                    <a href="#!">고객센터</a>
-                  </li>
-                  <li>
-                    <a href="#!">매장찾기</a>
-                  </li>
-                  <li>
-                    <a href="#!">단체구매</a>
-                  </li>
-                  <li>
-                    <a href="#!">제휴할인</a>
-                  </li>
+                  {["고객센터", "매장찾기", "단체구매", "제휴할인"].map((e) => {
+                    return (
+                      <li key={e}>
+                        <a href="#!">{e}</a>
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
               <div className="social-link">
@@ -217,10 +194,22 @@ function App() {
       <Header />
       <Routes>
         <Route exact path="/" element={<Main data={data} />} />
-        <Route path="/ALL" element={<All data={data} />} />
-        <Route path="/MAN" element={<Unisex data={data} title="man" />} />
-        <Route path="/WOMAN" element={<Unisex data={data} title="woman" />} />
-        <Route path="/KIDS" element={<Kids />} />
+        <Route
+          path="/ALL"
+          element={<CategoryPage data={data} category="all" />}
+        />
+        <Route
+          path="/MAN"
+          element={<CategoryPage data={data} category="man" />}
+        />
+        <Route
+          path="/WOMAN"
+          element={<CategoryPage data={data} category="woman" />}
+        />
+        <Route
+          path="/KIDS"
+          element={<CategoryPage data={data} category="kids" />}
+        />
         <Route path="/search" element={<Search data={data} />} />
       </Routes>
       <Footer />

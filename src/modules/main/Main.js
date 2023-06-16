@@ -1,7 +1,6 @@
 import React from "react";
 import { Section } from "./Section.js";
 import "./main.css";
-import { Link } from "react-router-dom";
 
 export const Main = ({ data }) => {
   // MoveBtn --> 앵커, top버튼
@@ -36,24 +35,15 @@ export const Main = ({ data }) => {
           <span>추천 브랜드</span>
         </div>
         <div className="brand">
-          <Link to="/">
-            <img src="image/Brand/nike.jpg" alt="나이키" />
-          </Link>
-          <Link to="">
-            <img src="image/Brand/new balance.jpg" alt="뉴발란스" />
-          </Link>
-          <Link to="">
-            <img src="image/Brand/jordan.jpg" alt="조던" />
-          </Link>
-          <Link to="">
-            <img src="image/Brand/adidas.jpg" alt="아디다스" />
-          </Link>
-          <Link to="">
-            <img src="image/Brand/crocs.jpg" alt="크록스" />
-          </Link>
-          <Link to="">
-            <img src="image/Brand/converse.jpg" alt="컨버스" />
-          </Link>
+          {["nike", "new balance", "jordan", "adidas", "crocs", "converse"].map(
+            (e) => {
+              return (
+                <a href="/" key={e}>
+                  <img src={`image/Brand/${e}.jpg`} alt={e} />
+                </a>
+              );
+            }
+          )}
         </div>
       </div>
       <Section className="section" name="slipper" data={data.slipper} />
