@@ -20,9 +20,13 @@ import {
   faFacebookSquare,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
+import { useRecoilValue } from "recoil";
+import { totalInCart } from "./modules/store/recoil";
 
 function App() {
   const [data, setData] = useState("");
+  const total = useRecoilValue(totalInCart);
+  console.log(total);
   useEffect(() => {
     (async function () {
       const response = await fetch("product.json");
@@ -75,6 +79,7 @@ function App() {
                 icon={faCartShopping}
                 role="cart"
               />
+              <p>{total}</p>
             </Link>
             <FontAwesomeIcon className="user" icon={faUser} role="user" />
             <FontAwesomeIcon

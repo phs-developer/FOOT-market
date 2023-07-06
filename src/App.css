@@ -75,6 +75,19 @@ button {
   margin-left: 20px;
   font-size: 1.5rem;
 }
+.user-info > a {
+  position: relative;
+}
+.user-info > a > p {
+  position: absolute;
+  top: -15px;
+  right: -10px;
+  color: white;
+  font-size: .9rem;
+  padding: 2px 7px;
+  background-color: rgba(59, 59, 241, 0.918);
+  border-radius: 50px;
+}
 .bar-icon {
   display: none;
 }
