@@ -19,8 +19,8 @@ export const Cart = ({ data }) => {
 
   //삭제버튼
   function handleDeleteInCart(e) {
-    setProdId(prodId.filter((prodId) => prodId !== e));
-    console.log(prodId[0]);
+    setProdId(prodId.filter((prodId) => prodId !== e.id));
+    localStorage.removeItem(e.name);
   }
 
   return (
@@ -48,7 +48,7 @@ export const Cart = ({ data }) => {
                   <td>
                     <button
                       onClick={() => {
-                        handleDeleteInCart(e.id);
+                        handleDeleteInCart(e);
                       }}
                     >
                       삭제

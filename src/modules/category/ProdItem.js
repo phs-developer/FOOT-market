@@ -14,11 +14,15 @@ export const ProdItem = ({ data }) => {
   });
 
   //담기 활성화->카트 넣기, 담기 비활성화->카트 빼기
-  function handleInCart(id, e) {
-    e.target.classList.toggle("in-cart");
-    cart.includes(id)
-      ? setCart(cart.filter((cart) => cart !== id))
-      : setCart((cart) => [...cart, e.target.id]);
+  function handleInCart(data, element) {
+    element.target.classList.toggle("in-cart");
+    if (cart.includes(data.id)) {
+      setCart(cart.filter((cart) => cart !== data.id));
+      localStorage.removeItem(data.name);
+    } else {
+      setCart((cart) => [...cart, data.id]);
+      localStorage.setItem(data.name, data.id);
+    }
   }
 
   return data.map((e) => {
@@ -29,10 +33,9 @@ export const ProdItem = ({ data }) => {
         <span>{e.name}</span>
         <span>{Number(e.price).toLocaleString()}원</span>
         <button
-          onClick={(target) => {
-            handleInCart(e.id, target);
+          onClick={(element) => {
+            handleInCart(e, element);
           }}
-          id={e.id}
           className={cart.includes(e.id) ? "in-cart" : ""}
         >
           담기

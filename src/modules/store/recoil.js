@@ -1,12 +1,17 @@
 import { atom, selector } from "recoil";
 
-//장바구니에 담긴 id 모음
+//장바구니 상품 id
+const prodInLocalStorage = [];
+for (let i = 0; i < localStorage.length; i++) {
+  const key = localStorage.key(i);
+  prodInLocalStorage.push(localStorage.getItem(key));
+}
 export const inCart = atom({
   key: "inCart",
-  default: [],
+  default: prodInLocalStorage,
 });
 
-// 장바구니 갯수
+// 장바구니 내 수량
 export const totalInCart = selector({
   key: "totalInCart",
   get: ({ get }) => {
