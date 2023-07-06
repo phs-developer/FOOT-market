@@ -1,6 +1,7 @@
 import "./App.css";
 import { Main } from "./modules/main/Main.js";
 import { CategoryPage } from "./modules/category/category.js";
+import { Cart } from "./modules/cart/cart.js";
 import { Search } from "./modules/Search.js";
 import React, { useState, useEffect } from "react";
 import { Link, Route, Routes, useNavigate } from "react-router-dom";
@@ -23,12 +24,11 @@ import {
 function App() {
   const [data, setData] = useState("");
   useEffect(() => {
-    async function getFetch() {
+    (async function () {
       const response = await fetch("product.json");
       const result = await response.json();
       setData(result);
-    }
-    getFetch();
+    })();
   }, []);
 
   const navigate = useNavigate();
@@ -69,14 +69,16 @@ function App() {
             </fieldset>
           </form>
           <div className="user-info">
-            <FontAwesomeIcon
-              className="cart"
-              icon={faCartShopping}
-              role="cart"
-            />
+            <Link to="cart">
+              <FontAwesomeIcon
+                className="cart-icon"
+                icon={faCartShopping}
+                role="cart"
+              />
+            </Link>
             <FontAwesomeIcon className="user" icon={faUser} role="user" />
             <FontAwesomeIcon
-              className="bar"
+              className="bar-icon"
               icon={faBars}
               onClick={handleNavOpen}
             />
@@ -89,11 +91,11 @@ function App() {
             onClick={handleNavOpen}
           />
           <ul className="nav-container">
-            {["ALL", "MAN", "WOMAN", "KIDS"].map((e) => {
+            {["all", "man", "woman"].map((e) => {
               return (
                 <li className="nav-item" key={e}>
                   <Link to={`/${e}`} onClick={handleNavOpen}>
-                    {e}
+                    {e.toUpperCase()}
                   </Link>
                 </li>
               );
@@ -195,22 +197,19 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Main data={data} />} />
         <Route
-          path="/ALL"
+          path="all"
           element={<CategoryPage data={data} category="all" />}
         />
         <Route
-          path="/MAN"
+          path="man"
           element={<CategoryPage data={data} category="man" />}
         />
         <Route
-          path="/WOMAN"
+          path="woman"
           element={<CategoryPage data={data} category="woman" />}
         />
-        <Route
-          path="/KIDS"
-          element={<CategoryPage data={data} category="kids" />}
-        />
         <Route path="/search" element={<Search data={data} />} />
+        <Route path="/cart" element={<Cart data={data} />} />
       </Routes>
       <Footer />
       <ScrollToTop />

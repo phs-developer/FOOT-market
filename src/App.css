@@ -69,11 +69,13 @@ button {
   width: 15%;
   justify-content: flex-end;
 }
-.user-info > svg {
+.user-info > svg,
+.user-info > a > svg {
+  color: black;
   margin-left: 20px;
   font-size: 1.5rem;
 }
-.bar {
+.bar-icon {
   display: none;
 }
 

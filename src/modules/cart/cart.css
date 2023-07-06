@@ -1,0 +1,23 @@
+.cart {
+  width: 80%;
+  margin: 50px auto;
+}
+.cart > h2 {
+  font-size: 3rem;
+  border-bottom: 1px solid #666;
+}
+.cart-list {
+  margin-bottom: 6rem;
+}
+.cart-list > li {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  column-gap: 2rem;
+  color: #666;
+  border: 1px solid #979797;
+  margin: 1rem 0;
+}
+.cart-list > li > img {
+  width: 80px;
+}

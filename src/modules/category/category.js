@@ -13,7 +13,7 @@ export const CategoryPage = ({ data, category }) => {
         prodList.push(data[e][i]);
       }
     });
-  } else if (category === "man" || category === "woman") {
+  } else {
     // 성별만 골라내어 이름순 정렬
     prodKeys.forEach((e) => {
       for (let i = 0; i < data[e].length; i++) {
@@ -22,15 +22,6 @@ export const CategoryPage = ({ data, category }) => {
         }
       }
     });
-  } else {
-    // 키즈 카테고리 준비중
-    const style = {
-      fontSize: "3rem",
-      width: "80%",
-      margin: "10% auto",
-      textAlign: "center",
-    };
-    return <div style={style}>키즈 코너는 준비중입니다.</div>;
   }
 
   return (

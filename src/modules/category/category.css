@@ -16,14 +16,15 @@
   display: grid;
   grid-template-rows: repeat(4, 1fr);
   grid-template-columns: repeat(5, 1fr);
-  grid-column-gap: 30px;
-  grid-row-gap: 50px;
+  column-gap: 30px;
+  row-gap: 50px;
   
 }
 .category-item {
   width: 100%;
   align-items: start;
   margin: 0;
+  position: relative;
 }
 .category-item > .prod-img {
   background-color: #f3f1f1;
@@ -37,6 +38,19 @@
 .category-item > span:last-child {
   margin-top: 5px;
   color: #666;
+}
+.category-item > button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: white;
+  background-color: black;
+  padding: .3rem .7rem;
+  font-size: .8rem;
+  cursor: pointer;
+}
+.category-item > .in-cart {
+  background-color: gray;
 }
 
 @media (max-width: 1024px) {
