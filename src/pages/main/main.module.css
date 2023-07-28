@@ -1,0 +1,79 @@
+
+/* moveBtn */
+.moveWrap {
+  display: flex;
+  flex-direction: column;
+}
+.move {
+  width: 290px;
+  color: black;
+  padding: 5px 0px 5px 213px;
+  background-color: rgba(0,0,0,.8);
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all .5s;
+  position: fixed;
+  left: -200px;
+}
+.move:nth-child(1) {
+  top: 200px;
+}
+.move:nth-child(2) {
+  top: 250px;
+}
+.move:nth-child(3) {
+  top: 300px;
+}
+.move:nth-child(4) {
+  top: 350px;
+}
+.move:hover {
+  left: -180px
+}
+.move:active {
+  transition: all 1s;
+}
+
+/* 추천 브랜드 */
+.brandFocus {
+  width: 80%;
+  margin: 2rem auto;
+}
+.title {
+  margin-bottom: 20px;
+}
+.title > h3 {
+  font-size: 1.5rem;
+}
+.title > span {
+  color: #bbb9b9;
+}
+.brand {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.brand > a {
+  width: 32%;
+}
+.brand > a > img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 5px;
+  border-radius: 10px;
+}
+
+
+@media (max-width: 1024px) {
+  .brand > a {
+    width: 49%;
+  }
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .brand > a {
+    width: 32%;
+  }
+}

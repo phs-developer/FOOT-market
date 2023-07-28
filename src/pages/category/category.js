@@ -1,6 +1,6 @@
 import React from "react";
 import { ProdItem } from "./ProdItem.js";
-import "./category.css";
+import styles from "./category.module.css";
 
 export const CategoryPage = ({ data, category }) => {
   const prodKeys = Object.keys(data);
@@ -25,13 +25,13 @@ export const CategoryPage = ({ data, category }) => {
   }
 
   return (
-    <div className="category">
+    <div className={styles.category}>
       <h2>{category.toUpperCase()}</h2>
-      <div className="sort-wrap">
+      <div className={styles.sortWrap}>
         <span>상품 {prodList.length}</span>
         <button type="button">이름순</button>
       </div>
-      <ul className="prod-wrap ">
+      <ul className={styles.prodWrap}>
         <ProdItem data={prodList} />
       </ul>
     </div>

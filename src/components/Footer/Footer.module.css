@@ -1,0 +1,142 @@
+/* FOOTER */
+.footer {
+  height: 350px;
+}
+.footerTop {
+  background-color: black;
+  padding: 10px 0;
+}
+.csContainer{
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+}
+.csContainer > span {
+  color: white;
+  margin-right: 2%;
+  font-size: 0.9rem;
+}
+.csContainer > span:first-child {
+  font-weight: 700;
+}
+.footerBottom {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 30px auto;
+}
+.footerBottom > .logoImg {
+  width: 30%;
+}
+.companyInfo {
+  width: 35%;
+  font-style: normal;
+}
+.companyInfo > h3,
+.helpLink > h3,
+.socialLink > h3 {
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.companyInfo > p {
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin: 1rem 10px 1rem 0px;
+  color: rgb(150, 148, 148);
+}
+.companyInfo > p > span:nth-child(2)::before {
+  content: " | ";
+  margin: 0px 5px;
+}
+.csLink {
+  display: flex;
+  width: 35%;
+  justify-content: space-between;
+}
+.helpLink {
+  margin-left: 30%;
+}
+.helpLink > ul > li > a,
+.helpLink > ul > li > a:visited {
+  color: #666;
+  text-decoration: none;
+  line-height: 28px;
+  font-size: 0.9rem;
+}
+.socialIcon {
+  display: flex;
+  flex-wrap: wrap;
+}
+.socialIcon > svg {
+  font-size: 1.5rem;
+  margin: 7px;
+}
+.copyright {
+  padding: 20px 0px;
+  border-top: 1px solid rgb(187, 186, 186);
+}
+.copyright > p {
+  width: 80%;
+  margin: 0px auto;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+@media (max-width:1024px) {
+  .footer {
+    height: 350px;
+  }
+  .footerBottom {
+    position: relative;
+  }
+  .footerBottom > .logoImg {
+    position: absolute;
+    width: 0px;
+    right: 140px;
+    bottom: -20px;
+  }
+  .footerBottom > .logo > img {
+    width: 80px;    
+  }
+  .companyInfo{
+    width: 60%;
+  }
+  .companyInfo > p {
+    font-size: 0.8rem;
+    margin: 0.5rem 0;
+  }
+  .companyInfo > p > span {
+    font-size: 0.8rem;
+  }
+  .csLink {
+    width: 40%;
+  }
+  .helpLink {
+    margin-left: 0;
+  }
+  .helpLink > ul > li > a,
+  .helpLink > ul > li > a:visited {
+    line-height: 23px;
+    font-size: 0.8rem;
+  }
+  .socialIcon > svg {
+    font-size: 1.2rem;
+    margin-left: 0px;
+  }
+}
+@media (max-width: 576px) {
+  .csContainer,
+  .footerBottom {
+    flex-wrap: wrap;
+  }
+  .companyInfo{
+    width: 500px;
+  }
+  .helpLink {
+    width: 100%;
+  }
+  .footerBottom > .logo {
+    right: 150px;
+    bottom: 70px;
+  }
+}

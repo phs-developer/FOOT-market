@@ -1,0 +1,171 @@
+/* HEADER */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  height: 130px;
+  padding: 15px 30px;
+  margin: 0px auto;
+}
+.header > h1 {
+  width: 25%;
+}
+.logoImg {
+  width: 150px;
+}
+.searchBar {
+  width: 60%;
+  text-align: center;
+}
+.searchBar > fieldset {
+  border: 0px;
+}
+.searchBar > fieldset > legend {
+  display: none;
+}
+.searchBar > fieldset > input {
+  border: 0px;
+  border-bottom: 1.5px solid black;
+  width: 50%;
+  height: 2rem;
+  background-color: white;
+  outline: none;
+  padding-left: 5px;
+}
+.search-bar > fieldset > button {
+  background-color: white;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.userInfo {
+  display: flex;
+  width: 15%;
+  justify-content: flex-end;
+}
+.userInfo > svg,
+.userInfo > a > svg {
+  color: black;
+  margin-left: 20px;
+  font-size: 1.5rem;
+}
+.userInfo > a {
+  position: relative;
+}
+.userInfo > a > p {
+  position: absolute;
+  top: -15px;
+  right: -10px;
+  color: white;
+  font-size: .9rem;
+  padding: 2px 7px;
+  background-color: rgba(59, 59, 241, 0.918);
+  border-radius: 50px;
+}
+.barIcon {
+  display: none;
+}
+
+/* HEADER-NAV */
+.nav {
+  background-color: black;
+  padding: 10px 0;
+}
+.nav.active {
+  display: block;
+}
+.nav > svg {
+  display: none
+}
+.navContainer{
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+}
+.navItem {
+  margin-right: 4%;
+}
+.navItem > a,
+.navItem > a:visited {
+  color: white;
+  text-decoration: none;
+}
+@media (max-width:1024px) {
+  .header {
+    height: 100px;
+    padding: 15px 0;
+    justify-content: space-between
+  }
+  .header > h1 {
+    width: initial;
+  }
+  .logoImg {
+    width: 110px;
+  }
+  .searchBar {
+    text-align: end;
+    width: 100%;
+  }
+  .searchBar > input {
+    display: none;
+    width: 60%;
+  }
+  .searchBar > button > svg {
+    font-size: 1.5rem;
+  }
+  .userInfo {
+    width: initial;
+  }
+  .userInfo > svg {
+    margin-left: 15px;
+  }
+  .barIcon,
+  .nav > svg {
+    display: block;
+  }
+
+  /* HEADER-NAV */
+  .header {
+    position: sticky;
+    top:0;
+    background-color: white;
+    z-index: 999;
+    border-bottom: 1px solid black;
+  }
+  .nav {
+    /* display: none; */
+    position: fixed;
+    top: 0px;
+    right: -100%;
+    width: 100%;
+    height: 50%;
+    transition: all 1s;
+    z-index: 9999;
+  }
+  .active {
+    right: 0px;
+  }
+  .navContainer {
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .navItem {
+    margin: 0px;
+    padding: 20px 0px
+  }
+  .navItem > a,
+  .navItem > a:visited {
+    font-size: 1.5rem;
+  }
+  .nav > svg {
+    color: white;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 2rem;
+    padding: 10px;
+  }
+
+}

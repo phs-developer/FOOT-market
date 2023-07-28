@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import styles from "../section/Section.module.css";
 
 export const MainProd = ({ data }) => {
   const animationHandler = useRef(null);
@@ -32,8 +33,12 @@ export const MainProd = ({ data }) => {
     let li = [];
     [0, 2, 4, 6].forEach((e) => {
       li.push(
-        <div key={e} className="main-box">
-          <img className="main-item" src={data[e].img} alt={data[e].img} />
+        <div key={e}>
+          <img
+            className={styles.mainItem}
+            src={data[e].img}
+            alt={data[e].img}
+          />
         </div>
       );
     });
@@ -41,10 +46,10 @@ export const MainProd = ({ data }) => {
   }
 
   return (
-    <div className="main-prod">
-      <div className="prod-hidden">
+    <div className={styles.mainProd}>
+      <div>
         <div
-          className="main-wrap"
+          className={styles.mainWrap}
           ref={animationHandler}
           style={{ transform: `translateX(0px)` }}
         >

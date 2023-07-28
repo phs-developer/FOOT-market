@@ -1,6 +1,6 @@
 import { useRecoilState } from "recoil";
-import { inCart } from "../store/recoil.js";
-import "./cart.css";
+import { inCart } from "../../modules/store/recoil.js";
+import styles from "./cart.module.css";
 
 export const Cart = ({ data }) => {
   const [prodId, setProdId] = useRecoilState(inCart);
@@ -24,10 +24,10 @@ export const Cart = ({ data }) => {
   }
 
   return (
-    <section className="cart">
+    <section className={styles.cart}>
       <h2>장바구니 ({prodInCart.length})</h2>
       <div>
-        <table className="cart-list">
+        <table className={styles.cartList}>
           <thead>
             <tr>
               <th>이미지</th>
@@ -39,7 +39,7 @@ export const Cart = ({ data }) => {
           <tbody>
             {prodInCart.map((e) => {
               return (
-                <tr key={e.id} className="cart-item">
+                <tr key={e.id} className={styles.cartItem}>
                   <td>
                     <img src={e.img} alt={e.img} />
                   </td>
@@ -58,7 +58,7 @@ export const Cart = ({ data }) => {
               );
             })}
           </tbody>
-          <tfoot className="total">
+          <tfoot className={styles.total}>
             <tr>
               <td colSpan="4">총 금액 : {total.toLocaleString()}원</td>
             </tr>

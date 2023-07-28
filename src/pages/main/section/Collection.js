@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "../section/Section.module.css";
 
 export const Collection = ({ data, name }) => {
   if (!Array.isArray(data)) return;
@@ -9,9 +10,9 @@ export const Collection = ({ data, name }) => {
     let item = [];
     for (let i = 0; i < length; i++) {
       item.push(
-        <li key={data[i].name} className="prod-item">
-          <img className="prod-img" src={data[i].img} alt={data[i].img} />
-          <span className="brand-name">{data[i].brand}</span>
+        <li key={data[i].name} className={styles.prodItem}>
+          <img className={styles.prodImg} src={data[i].img} alt={data[i].img} />
+          <span className={styles.brandName}>{data[i].brand}</span>
           <span>{data[i].name}</span>
         </li>
       );
@@ -20,8 +21,8 @@ export const Collection = ({ data, name }) => {
   }
 
   return (
-    <div className="collection">
-      <ul className="prod-wrap">
+    <div className={styles.collection}>
+      <ul className={styles.prodWrap}>
         <MakeProdItem />
       </ul>
     </div>

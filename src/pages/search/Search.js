@@ -1,4 +1,5 @@
-import { ProdItem } from "./category/ProdItem.js";
+import { ProdItem } from "../category/ProdItem";
+import styles from "../category/category.module.css";
 
 export const Search = ({ data }) => {
   const value = document.getElementById("query").value;
@@ -14,13 +15,13 @@ export const Search = ({ data }) => {
   });
 
   return (
-    <div className="category">
+    <div className={styles.category}>
       <h2>'{value}' 검색 결과</h2>
-      <div className="sort-wrap">
+      <div className={styles.sortWrap}>
         <span>상품 {prodList.length}</span>
         <button type="button">이름순</button>
       </div>
-      <ul className="prod-wrap ">
+      <ul className={styles.prodWrap}>
         <ProdItem data={prodList} />
       </ul>
     </div>

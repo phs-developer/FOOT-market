@@ -1,0 +1,113 @@
+/* section 영역 */
+.eventBanner > img {
+  width: 100%;
+}
+.content {
+  width: 80%;
+  margin: 0 auto 6rem;
+}
+.sectionTitle {
+  font-size: 3rem;
+  padding-top: 1rem;
+  width: 80%;
+  border-bottom: 2px solid black;
+  width: 300px;
+}
+.rowContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* MainProd 영역 */
+.mainProd {
+  display: flex;
+  justify-content: space-around;
+}
+.mainProd > div {
+  overflow: hidden;
+}
+.mainWrap,
+.prodWrap {
+  display: flex;
+  align-items: center;
+}
+.mainWrap {
+  width: 500px;
+}
+.mainItem {
+  width: 500px;
+}
+.prodWrap {
+  justify-content: space-between;
+}
+.prodItem {
+  width: 15%;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.prodImg {
+  width: 100%;
+}
+.prodItem > span {
+  width: 70%;
+  font-size: 0.8rem;
+  color: #919090;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.prodItem > .brandName {
+  color: black;
+  font-size: 1rem;
+  margin-bottom: 3px;
+}
+/* 슬리퍼, 기타 섹션 flex-row */
+
+.rowContent > .mainProd {
+  width: 500px;
+}
+.rowContent > .collection > .prodWrap {
+  flex-wrap: wrap;
+}
+.rowContent > .collection > .prodWrap > .prodItem {
+  width: 30%
+}
+
+@media (max-width: 1024px) {
+  .moveWrap {
+    display: none;
+  }
+  .content {
+    width: 95%;
+  }
+  .prodWrap {
+    flex-wrap: wrap;
+  }
+  .prodItem,
+  .rowContent > .collection > .prod-wrap > .prod-item {
+    width: 30%;
+  }
+  .rowContent {
+    flex-direction: column;
+  }
+  .rowContent > .mainProd {
+    width: 100%;
+  }
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .event {
+    overflow: hidden;
+  }
+  .sectionTitle {
+    font-size: 2rem;
+    width: 250px;
+  }
+}
