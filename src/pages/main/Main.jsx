@@ -1,5 +1,5 @@
 import React from "react";
-import { Section } from "./section/Section.js";
+import { Section } from "./section/Section.jsx";
 import styles from "./main.module.css";
 
 export const Main = ({ data }) => {

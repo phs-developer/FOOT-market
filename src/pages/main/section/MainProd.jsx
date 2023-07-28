@@ -26,23 +26,10 @@ export const MainProd = ({ data }) => {
     }, 2000);
   }, []);
 
-  if (!Array.isArray(data)) return;
-
-  // mian-prod 생성
-  function MakeMainProdItem() {
-    let li = [];
-    [0, 2, 4, 6].forEach((e) => {
-      li.push(
-        <div key={e}>
-          <img
-            className={styles.mainItem}
-            src={data[e].img}
-            alt={data[e].img}
-          />
-        </div>
-      );
-    });
-    return li;
+  // mianItem 4개
+  let mainItem = [];
+  for (let i = 0; i <= 3; i++) {
+    mainItem.push(data[i]);
   }
 
   return (
@@ -53,7 +40,13 @@ export const MainProd = ({ data }) => {
           ref={animationHandler}
           style={{ transform: `translateX(0px)` }}
         >
-          <MakeMainProdItem />
+          {mainItem.map((e) => {
+            return (
+              <div key={e.id}>
+                <img className={styles.mainItem} src={e.img} alt={e.img} />
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>

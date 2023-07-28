@@ -1,10 +1,11 @@
 import React from "react";
-import { MainProd } from "./MainProd.js";
-import { Collection } from "./Collection.js";
+import { MainProd } from "./MainProd.jsx";
+import { Collection } from "./Collection.jsx";
 import styles from "../section/Section.module.css";
 import cx from "clsx";
 
 export const Section = ({ name, data }) => {
+  // 슬리퍼, 아더 카테고리는 flex-row로 진행되어서 row-content 클래스명 추가
   const flexRow = name === "slipper" || name === "other";
 
   //이벤트 배너
@@ -17,8 +18,6 @@ export const Section = ({ name, data }) => {
     );
   };
 
-  // 슬리퍼, 아더 카테고리는 flex-row로 진행되어서 row-content 클래스명 추가
-
   return (
     <section id={name}>
       <Event />
@@ -27,8 +26,8 @@ export const Section = ({ name, data }) => {
         <div
           className={cx(styles.contentItem, { [styles.rowContent]: flexRow })}
         >
-          <MainProd data={data} name={name} />
-          <Collection data={data} name={name} />
+          {data && <MainProd data={data} name={name} />}
+          {data && <Collection data={data} name={name} />}
         </div>
       </div>
     </section>

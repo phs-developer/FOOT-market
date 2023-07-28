@@ -1,7 +1,7 @@
 import "./App.css";
-import { Main } from "./pages/main/Main.js";
-import { Cart } from "./pages/cart/cart.js";
-import { Search } from "./pages/search/Search.js";
+import { Main } from "./pages/main/Main";
+import { Cart } from "./pages/cart/cart";
+import { Search } from "./pages/search/Search";
 import React, { useState, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -20,21 +20,6 @@ function App() {
     })();
   }, []);
 
-  //ScrollToTop
-  const ScrollToTop = () => {
-    const scrollToTop = () => {
-      window.scrollTo({
-        top: 0,
-      });
-    };
-
-    return (
-      <div className="top-btn" onClick={scrollToTop}>
-        <p>TOP</p>
-        <FontAwesomeIcon className="top-moved" icon={faPlane} />
-      </div>
-    );
-  };
   return (
     <div>
       <Header />
@@ -62,3 +47,19 @@ function App() {
 }
 
 export default App;
+
+//ScrollToTop
+function ScrollToTop() {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+    });
+  };
+
+  return (
+    <div className="top-btn" onClick={scrollToTop}>
+      <p>TOP</p>
+      <FontAwesomeIcon className="top-moved" icon={faPlane} />
+    </div>
+  );
+}
